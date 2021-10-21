@@ -18,7 +18,9 @@ jobs:
 
       - name: Run a multi-line script
         run: |
+
+          go get -u github.com/gobuffalo/packr/packr
           echo $GOPATH
           which go
-          go get -u github.com/gobuffalo/packr/packr
+          ls -la $GOROOT/bin
           packr --help
