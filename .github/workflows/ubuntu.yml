@@ -15,9 +15,10 @@ jobs:
         with:
           go-version: 1.16
       - uses: actions/checkout@v2
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v2
+
       - name: Run a multi-line script
         run: |
+          echo $GOPATH
+          which go
           go get -u github.com/gobuffalo/packr/packr
           packr --help
