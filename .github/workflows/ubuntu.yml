@@ -22,6 +22,7 @@ jobs:
           go get -u github.com/gobuffalo/packr/packr
           echo $GOPATH
           which go
-          ls -la $GOPATH/bin
+          ls -l $GOPATH
+          ls -l $GOPATH/bin
           go env
           packr --help
