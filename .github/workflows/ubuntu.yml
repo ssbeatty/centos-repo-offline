@@ -18,9 +18,10 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-
+          go env -w GO111MODULE=on
           go get -u github.com/gobuffalo/packr/packr
           echo $GOPATH
           which go
           ls -la $GOROOT/bin
+          go env
           packr --help
